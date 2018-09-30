@@ -1,0 +1,35 @@
+﻿<Window x:Class="MyWPFapp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyWPFapp"
+        xmlns:mdi="clr-namespace:WPF.MDI;assembly=WPF.MDI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="425" WindowState="Maximized">
+    <DockPanel>
+        <mdi:MdiContainer Name="Container">
+            <mdi:MdiContainer.Menu>
+                <Menu DockPanel.Dock="Top">
+                    <MenuItem Header="File">
+                        <MenuItem Header="Exit" Click="Exit_Click" />
+                    </MenuItem>
+                    <MenuItem Header="View">
+                        <MenuItem Header="Windows" x:Name="WindowsMenu" x:FieldModifier="private" />
+                        <MenuItem Header="Theme">
+                            <MenuItem Header="Generic" Name="Generic" ToolTip="Generic Visual Studio designer theme" Click="Generic_Click" />
+                            <MenuItem Header="Luna" Name="Luna" ToolTip="Blue Windows XP theme" Click="Luna_Click" />
+                            <MenuItem Header="Aero" Name="Aero" ToolTip="Windows Vista/7 theme"  Click="Aero_Click" />
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="System Info">
+                        <MenuItem Header="Running processes" Name="Running" ToolTip="Running processes" Click="RunningProcesses_Click" />
+                    </MenuItem>
+                    <MenuItem Header="About">
+                        <MenuItem Header="About..." Name="About" ToolTip="About" Click="About_Click" />
+                    </MenuItem>
+                </Menu>
+            </mdi:MdiContainer.Menu>
+        </mdi:MdiContainer>
+    </DockPanel>
+</Window>
